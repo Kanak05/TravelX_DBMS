@@ -9,3 +9,6 @@ def aboutus(request):
 
 def contactus(request):
 	return render(request,'contact.html')
+
+def signin(request):
+	return render(request,'signin.html')
