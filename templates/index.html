@@ -1,8 +1,23 @@
 {% extends 'base.html' %}
-{% block content %}
-
+{% block style %}<link rel="stylesheet" href="../static/css/travel2.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    {% comment %} <link rel="stylesheet" href="../static/css/travel2.css"> {% endcomment %}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
+   {% comment %} <link rel="stylesheet" href="../static/css/style.css">  {% endcomment %}
+    <link rel="stylesheet" href="../static/assets/css/swiper-bundle.min.css  "> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">{% endblock style %}
+{% block title %} TravelX {% endblock title %}
+{% block body %}
+{% include 'includes/navbar.html' %}
 {% load static %}
-<link rel="stylesheet" href="../static/css/travel2.css">
+
     <div class="bg bg1">
         <div class="hero-content">
             <h1>Discover &amp; Book</h1>
@@ -237,7 +252,7 @@
         </div>
     </section>
 
-    <script type="module" src="'https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="../static/js/script.js"></script>
@@ -547,7 +562,7 @@
                         murtis privately in homes and publicly on elaborate pandals .</p>
                 </div>
             </div> 
-            <div class="it"
+            <div class="it act"
                 style="background-image: url(https://www.nativeplanet.com/img/2023/08/untitleddesign-2023-08-21t124604-491-1692602338.jpg);">
                 <div class="dec">
                     <h3>Durga Pooja</h3>
@@ -556,7 +571,7 @@
                         celebrated because of Durga's victory over Mahishasura.</p>
                 </div>
             </div>
-            <div class="it" style="background-image: url(https://i.ndtvimg.com/i/2017-10/golden-temple-diwali_650x400_71508582447.jpg);">
+            <div class="it act" style="background-image: url(https://i.ndtvimg.com/i/2017-10/golden-temple-diwali_650x400_71508582447.jpg);">
                 <div class="dec">
                     <h3>Diwali</h3>
                     <p>Diwali is the Hindu festival of lights with its variations also celebrated in other Indian
@@ -564,7 +579,7 @@
                         knowledge over ignorance". </p>
                 </div>
             </div>
-            <div class="it" style="background-image: url(https://i5.walmartimages.com/asr/2ce5fe95-2580-428b-94bf-4d8cb3492a8a_1.ced059614f0f1ae7a26f5c2c6a5dea9b.jpeg);">
+            <div class="it act" style="background-image: url(https://i5.walmartimages.com/asr/2ce5fe95-2580-428b-94bf-4d8cb3492a8a_1.ced059614f0f1ae7a26f5c2c6a5dea9b.jpeg);">
                 <div class="dec">
                     <h3>Christmas</h3>
                     <p>Christmas is an annual festival commemorating the birth of Jesus Christ, observed primarily on
@@ -572,14 +587,14 @@
                         world.</p>
                 </div>
             </div>
-            <div class="it" style="background-image: url(https://c2.staticflickr.com/6/5538/10308897475_a4860d8b69_b.jpg);">
+            <div class="it act" style="background-image: url(https://c2.staticflickr.com/6/5538/10308897475_a4860d8b69_b.jpg);">
                 <div class="dec">
                     <h3>Dussehra</h3>
                     <p>Dussehra, also called Dasara or Vijayadashami, in Hinduism, holiday marking the triumph of Rama,
                         an avatar of Vishnu, over the 10-headed demon king Ravana, who abducted Rama’s wife, Sita.</p>
                 </div>
             </div>
-            <div class="it"
+            <div class="it act"
                 style="background-image: url(https://images.newindianexpress.com/uploads/user/imagelibrary/2018/10/15/original/PTI10_15_2018_000048B.jpg);">
                 <div class="dec">
                     <h3>Navratri</h3>
@@ -832,8 +847,8 @@
 <br>
 <br>
 <br>
-<div class="footer-dark">
-    <footer>
+<div class="footer-dark fixed-bottom">
+    <footer class="">
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 col-md-3 item">

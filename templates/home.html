@@ -1,0 +1,216 @@
+{% extends "base.html" %}
+ {% load static %}
+ {% block titlehome %} Home {% endblock titlehome %}
+ {% block style %}
+  <link rel="stylesheet" href="{% static "css/home.css" %}"> 
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300i,400" rel="stylesheet">
+{% endblock style %} 
+{% block bodycontent %}
+ {% include 'includes/nav.html' %}
+ {% comment %} ------------------------Discover&Book---------------------------- {% endcomment %}
+
+  <div class="bg bg1">
+    <div class="hero-content">
+      <div class="text-center">
+        <h1 class="py-3">Discover &amp; Book</h1>
+        <h2>Perfect Tour Package for Your Holidays</h2>
+      </div>
+	  <div class="searchbar">
+      <form method="POST">
+        {%csrf_token%}
+        <div class="row justify-content-center py-3">
+          <div class="input-box col-sm-4">
+            <span class="material-icons">
+              <label for="city-to"><b>Destination</b></label></span
+			  >
+            <input
+              id="city-to" type="text" autocomplete="off" name="city-to" placeholder="where to go?" class="fs14" />
+          </div>
+          <div class="input-box col-sm-4">
+           <span class="material-icons">
+            <label for="date-input" ><b>Date</b></label></span> 
+            <input type="date" id="Date" name="date" placeholder="dd-mm-yyyy" />
+          </div>
+          <div class="input-box col-sm-4">
+			<span class="material-icons">
+            <label for="num-of-days"  name="days"
+              ><b>Duration</b></label
+            ></span> 
+            <div class="night">
+              <!-- <button class="minus-btn">-</button> -->
+              <input
+                type="number"
+                class="night-input"
+                placeholder="num_of_days"
+                min="1"
+                name="num_of_days"
+              />
+              <!-- <span class="day-text fc2 fs14">Day(s)</span> -->
+              <!-- <button class="plus-btn">+</button> -->
+            </div>
+          </div>
+          
+		  </div>
+			<div class="justify-content-center py-3">
+			  <button type="button" class="btn btn-success btn-lg">Search</button>
+			</div>
+      </form>
+	</div> 
+    </div>
+  </div>
+
+ 
+ {% comment %} ----------------------popular destination----------------------------------- {% endcomment %}
+ {% comment %} ----------------------popular Religious Places------------------------------ {% endcomment %}
+ {% comment %} ---------------------------Holiday themes ---------------------------------- {% endcomment %}
+ 
+	 <div class="text-center py-3 " >
+		 
+		 <h3>Holiday themes</h3>
+		 </div>
+		 
+		 <div class="container">
+	<div class="card">
+	  <h3 class="title">ADVENTURE</h3>
+	  <img src="../static/img/TELEMMGLPICT000297198535_trans_NvBQzQNjv4BqRo0U4xU-30oDveS4pXV-Vv4Xpit_DMGvdp2n7FDd82k.webp">
+	</div>
+	
+	<div class="card">
+	  <h3 class="title">WILDLIFE</h3>
+	  <img src="../static/img/WILDLIFE.jpg">
+	</div>
+	<div class="card">
+	  <h3 class="title">NATURE</h3>
+	  <img src="../static/img/NATURE.jpg">
+	</div>
+	<div class="card">
+	  <h3 class="title">BEACH</h3>
+	  <img src="../static/img/wtqqnkYDYi2ifsWZVW2MT4.jpg">
+	</div>
+	<div class="card">
+	  <h3 class="title">HILL STATION</h3>
+	  <img src="../static/img/hills-station-india.jpg">
+	  </div>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ {% comment %} ----------------------Stories tip and guide--------------------------------- {% endcomment %}
+
+ <div class="stories text-center py-3 " >
+	
+	<h3>Stories, Tips, and Guides</h3>
+ </div>
+ <div class="slide-container swiper">
+	<div class="slide-content">
+		<div class="card1-wrapper swiper-wrapper">
+			{% for story in stories %}
+			<div class="card1 swiper-slide">
+				<div class="image-content">
+					<!-- <span class="overlay"></span> -->
+
+					{% comment %} <div class="card1-image"> {% endcomment %}
+						<img src="{{story.image}}" alt="" class="card-img">
+					{% comment %} </div> {% endcomment %}
+				
+				</div>
+				<div class="card1-content">
+					
+					<p class="description"><b>"{{story.title}}"</b> <br>
+						{{story.content|slice:200}}	</p>
+
+					<!-- <button class="button">View More</button> -->
+				</div>
+			</div>
+			{% endfor %}
+			
+		</div>
+	</div>
+
+	<div class="swiper-button-next swiper-navBtn"></div>
+	<div class="swiper-button-prev swiper-navBtn"></div>
+	<div class="swiper-pagination"></div>
+</div>
+
+	<script>
+		var swiper = new Swiper(".slide-content", {
+			slidesPerView: 4,
+			spaceBetween: 25,
+			loop: true,
+			centerSlide: 'true',
+			fade: 'true',
+			grabCursor: 'true',
+			pagination: {
+			  el: ".swiper-pagination",
+			  clickable: true,
+			  dynamicBullets: true,
+			},
+			navigation: {
+			  nextEl: ".swiper-button-next",
+			  prevEl: ".swiper-button-prev",
+			},
+		
+			breakpoints:{
+				0: {
+					slidesPerView: 1,
+				},
+				480: {
+					slidesPerView: 2,
+				},
+				950: {
+					slidesPerView: 3,
+				},
+				1050: {
+					slidesPerView: 4,
+				},
+				1550: {
+					slidesPerView: 5,
+				},
+			},
+		  });
+		
+		
+		
+	 </script>
+	 
+
+ {% comment %} ----------------------Latest events and festival---------------------------- {% endcomment %}
+
+ <div class="stories text-center py-3 " >
+	 
+	 <h3>Latest Events & Festivals</h3>
+	</div>
+	<section class="contain">
+
+	 {% for obj in festival %}
+	<div class="it act" style="background-image: url({{obj.image}});">
+		<div class="dec">
+			<h3>{{obj.title}}</h3>
+			<p>{{obj.content}}</p>
+		</div>
+	</div>
+	{% endfor %} 
+	
+</section>
+ {% comment %} ------------------------most popular packages------------------------------- {% endcomment %}
+
+
+ 
+ 
+  {% endblock bodycontent %}

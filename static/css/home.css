@@ -1,0 +1,374 @@
+/* ----------------discover wala css---------------------- */
+@keyframes changeBackground {
+  0% {
+      background-image: url('http://seo.superbmytrip.com/assets/images/5b60d460-d381-4df4-b490-78df9b288b90.jpg');
+  }
+  40% {
+      background-image: url('https://i0.wp.com/www.letsgoforacamp.com/wp-content/uploads/2023/05/WhatsApp-Image-2023-05-24-at-12.30.44-PM.jpeg?resize=1024%2C576&ssl=1');
+  }
+  60% {
+      background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Landscape-india.svg/768px-Landscape-india.svg.png?20171209202435');
+  }
+  100%{
+      background-image: url('http://seo.superbmytrip.com/assets/images/5b60d460-d381-4df4-b490-78df9b288b90.jpg'); /* Loop back to the first image */
+  }
+}
+
+.body{
+  background-color: #f0f3f6;
+  
+}
+
+
+.bg1 {
+  animation: changeBackground 20s linear infinite; /* Change every 5 seconds (4 images in 20 seconds) */
+  background-size: cover;
+  min-height: fit-content;
+  height: calc(auto - 72px);
+  transition: background-image 0.5s; /* Add a smooth transition between image changes */
+}
+
+
+/* Style the hero section */
+.hero-content {
+    color: #fff;
+    /* padding: 10px; */
+    text-align: center;
+    position: relative; /* Add this line */
+    /* height: 66vh; Adjust the height to control the positioning */
+   
+}
+/*   
+.hero-content h1 {
+    font-size: 2.5rem;
+}
+ */
+.hero-content h2 {
+    position: relative;
+    
+    /* font-size: 1.5rem; */
+    /* margin-top: 20px; */
+}
+
+/* Style the form container */
+.quick-form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* background: rgba(255, 255, 255, 0.8); */
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 10px;
+    position: absolute; /* Position relative to the hero content */
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%; /* Adjust the width */
+}
+
+/* Style input boxes */
+.input-box {
+    flex-basis: calc(23.33% - 30px);
+    margin: 10px;
+    position: relative;
+    font-size: 20px;
+}
+
+.input-box label {
+    display: block;
+
+  font-size: 1.5rem;
+}
+
+.input-box input {
+    width: 90%;
+    padding: 7px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.0rem;
+    margin-top: 08px;
+}
+
+/* ----------------------headings---------------------------------------------- */
+
+h3{
+  left: 40%;
+  color: #d91244;
+  top: 40%;
+}
+
+/* ----------------------popular destination----------------------------------- */
+/* ----------------------popular Religious Places------------------------------ */
+/* ---------------------------Holiday themes ---------------------------------- */
+.container {
+  justify-content: center;
+  margin: 2%;
+  height: fit-content;
+  width: auto; 
+  top: 60px; 
+  left: calc(60% - 850px);
+  /* left: 50%; */
+  display: flex;
+}
+
+.card {
+  display: flex;
+  height: 230px;
+  width: 980px;
+  
+  /* background-color: #17141d; */
+  
+  box-shadow: -1rem 0 3rem #a9a8a8;
+  /* font-size: larger; */
+  font-family: Georgia, 'Times New Roman', Times, serif;
+/*   margin-left: -50px; */
+  transition: 0.4s ease-out;
+  position: relative;
+  left: 0px;
+
+}
+.card img{
+  height: 230px;
+
+}
+.card:not(:first-child) {
+    margin-left: -90px;
+    
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
+
+.card:hover ~ .card1 {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+
+.title {
+  
+  /* font-weight: 100; */
+  font-size: 1.1rem;
+  position: absolute;
+  color: rgb(6, 6, 6);
+  left: 20px;
+  top: 15px;
+}
+
+
+
+
+/* ----------------------Stories tip and guide--------------------------------- */
+
+
+ 
+  .slide-container{
+    margin: 0 40px;
+    /* max-width: 1300px; */
+    width: 100%;
+    padding: 40px 0px;
+    border-color: #000;
+  }
+  .slide-content{
+    margin: 0 50px;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+  .card1{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s;
+    font-size: 5px;
+  }
+  
+  .card1:hover {
+    transform: translateY(-10px);
+}
+
+.card1 .image-content {
+    flex: 1 0 auto;
+}
+.card1 .image-content img {
+  width: 100%;
+  
+  position: relative;
+  height: 150px;
+  object-fit: cover;
+}
+.card1 .card1-content {
+  padding: 15px;
+  background-color: #fff;
+  flex: 1 1 auto;
+}
+.card1-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 14px;
+  }
+  
+  
+  /* .card1-image{
+    position: relative;
+    height: 150px;
+    width: 100%;
+    border-radius: 0%;
+    background: #FFF;
+    
+  }
+  .card1-image .card1-img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0%;
+   
+  } */
+  
+  .description{
+    padding: 3px;
+    text-align: center;
+    padding-top: 10px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+  }
+  
+  .swiper-navBtn{
+    color: #6E93f7;
+    transition: color 0.3s ease;
+  }
+  .swiper-navBtn:hover{
+    color: #4070F4;
+  }
+  .swiper-navBtn::before,
+  .swiper-navBtn::after{
+    font-size: 35px;
+  }
+  .swiper-button-next{
+    right: 0;
+  }
+  .swiper-button-prev{
+    left: 0;
+  }
+  .swiper-pagination-bullet{
+    background-color: #6E93f7;
+    opacity: 1;
+  }
+  .swiper-pagination-bullet-active{
+    background-color: #4070F4;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .slide-content{
+      margin: 0 10px;
+    }
+    .swiper-navBtn{
+      display: none;
+    }
+  }
+  /* ----------------------festival and events--------------------------------- */
+ 
+
+  .it.act {
+    width: 500px;
+    box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
+  }
+  
+  .it.act .dec {
+    transform: none;
+    -webkit-transform: none;
+  }
+  
+  .contain {
+    background-color: #6E93f7;
+    /* margin-top: -20px;
+    position: relative;
+    top: 560px;
+    z-index: 5;
+    padding: 80px 50px;
+    margin: 15px 0;
+    margin-top: 60px;
+    display: flex;
+    display: -webkit-flex; */
+  }
+  
+  .it {  
+    /* margin: 0 15px 60px; */
+    width: 300px;
+    height: 400px;
+    display: flex;
+    display: -webkit-flex;
+    align-items: flex-end;
+    -webkit-align-items: flex-end;
+    background: #343434 no-repeat center center / cover;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    cursor: pointer;
+  } 
+  
+  .it:after {
+    content: "";
+    display: block;
+    /* position: absolute; */
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+  }
+  
+  .dec p {
+    opacity: 0;
+    -webkit-transform: translateY(32px);
+    transform: translateY(32px);
+    transition: all 0.4s ease-in-out 0.2s;
+    -webkit-transition: all 0.4s ease-in-out 0.2s;
+    
+  }
+  
+  .dec {
+    padding: 0 24px 12px;
+    color: #fff;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    transform: translateY(calc(100% - 54px));
+    -webkit-transform: translateY(calc(100% - 54px));
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+  }
+  
+  .it.act .dec p {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  
+  .dec h3 {
+    font-size: 24px;
+    padding: 20px;
+    bottom: 20px;
+    transform: translateY(calc(100% - 54px));
+    -webkit-transform: translateY(calc(100% - 54px));
+    transition: all 0.4s ease-in-out;
+    -webkit-transition: all 0.4s ease-in-out;
+    color: #fff;
+    text-shadow: #000 1px 1px 1px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+  
+  .it.act {  
+    width: 500px;
+    box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
+  }
+  

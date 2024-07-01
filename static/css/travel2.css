@@ -1,4 +1,5 @@
 /* Define a keyframe animation to change the background images */
+/* ----------------discover wala css---------------------- */
 @keyframes changeBackground {
     0% {
         background-image: url('http://seo.superbmytrip.com/assets/images/5b60d460-d381-4df4-b490-78df9b288b90.jpg');
@@ -34,7 +35,7 @@
       padding: 33px;
       text-align: center;
       position: relative; /* Add this line */
-      height: 66vh; /* Adjust the height to control the positioning */
+      height: 66vh; 
      
   }
   
@@ -45,7 +46,7 @@
   .hero-content h2 {
       position: relative;
       
-      font-size: 1.5rem;
+      font-size: 1.5rem; 
       margin-top: 20px;
   }
   
@@ -116,7 +117,7 @@
      
   }
   
-  
+  /* ---------------------------------------------------- */
   
   /* Reset some default styles for the page */
   body, ul {
